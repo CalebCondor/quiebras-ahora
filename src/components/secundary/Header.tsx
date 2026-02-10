@@ -57,9 +57,9 @@ export function Header() {
             className="transition-transform hover:scale-105 duration-300"
           >
             <img
-              src="/src/assets/images/logo.png"
+              src="images/logo.png"
               alt="Logo"
-              className="h-8 md:h-12 w-auto object-contain"
+              className="h-8 md:h-8 w-auto object-contain"
             />
           </a>
         </div>
