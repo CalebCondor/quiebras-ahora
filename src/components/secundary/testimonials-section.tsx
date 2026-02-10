@@ -46,7 +46,7 @@ export function TestimonialsSection() {
   return (
     <section
       id="testimonios"
-      className="py-24 px-4 sm:px-6 lg:px-8 bg-white overflow-hidden"
+      className="py-8 lg:py-24 px-4 sm:px-6 lg:px-8 bg-white overflow-hidden"
     >
       <div className="container mx-auto max-w-7xl">
         {/* Section Header */}

@@ -2,12 +2,14 @@
 import Layout from "../layouts/Layout.astro";
 import Hero from "../components/Hero.astro";
 import AboutUs from "../components/AboutUs.astro";
+import Services from "../components/secundary/Services.astro";
 import { TestimonialsSection } from "@/components/secundary/testimonials-section";
 ---
 
 <Layout>
   <Hero />
   <AboutUs />
+  <Services />
   <TestimonialsSection client:visible />
-  <!-- Aquí irán las demás secciones como Servicios, Testimonios, etc. -->
+  <!-- Aquí irán las demás secciones como Oficinas, Blog, etc. -->
 </Layout>

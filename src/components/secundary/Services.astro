@@ -1,0 +1,161 @@
+---
+import {
+  Scale,
+  ShieldCheck,
+  ArrowRight,
+  Gavel,
+  CheckCircle2,
+} from "@lucide/astro";
+---
+
+<section id="servicios" class="py-24 px-8 bg-gray-50/50 overflow-hidden">
+  <div class="max-w-[1400px] mx-auto">
+    <!-- Header Section -->
+    <div
+      class="flex flex-col lg:flex-row lg:items-end justify-between gap-8 mb-20"
+    >
+      <div class="max-w-2xl">
+        <div
+          class="flex items-center gap-3 text-primary font-bold uppercase tracking-[0.25em] text-[11px] mb-6"
+        >
+          <Gavel class="w-5 h-5" />
+          <span class="border-b border-primary/30 pb-1">Soluciones Legales</span
+          >
+        </div>
+        <h2
+          class="text-4xl md:text-5xl lg:text-6xl font-['Playfair_Display'] text-gray-900 leading-[1.15] mb-6"
+        >
+          Nuestros <span class="text-primary italic font-serif">Servicios</span>
+        </h2>
+        <p class="text-gray-600 text-lg leading-relaxed">
+          Brindamos soluciones para liquidación y reorganización de deudas,
+          ayudando a cientos de clientes a obtener financiamiento para su hogar,
+          autos y deudas no hipotecarias, ofreciendo tranquilidad y estabilidad
+          financiera.
+        </p>
+      </div>
+      <div class="hidden lg:block pb-2">
+        <a
+          href="#contacto"
+          class="flex items-center gap-3 text-primary font-bold uppercase tracking-widest text-xs group"
+        >
+          Ver todos los servicios
+          <ArrowRight
+            class="w-4 h-4 group-hover:translate-x-2 transition-transform"
+          />
+        </a>
+      </div>
+    </div>
+
+    <!-- Services Grid -->
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12">
+      <!-- Service 1: Liquidación -->
+      <div
+        class="group relative bg-white p-10 lg:p-14 shadow-[0_20px_50px_rgba(0,0,0,0.04)] hover:shadow-[0_20px_60px_rgba(204,0,0,0.08)] transition-all duration-500 border border-transparent hover:border-primary/10 flex flex-col items-start overflow-hidden"
+      >
+        <!-- Decorative background icon -->
+        <ShieldCheck
+          class="absolute -right-8 -top-8 w-48 h-48 text-gray-50/50 -rotate-12 group-hover:text-primary/5 transition-colors duration-500"
+        />
+
+        <div class="relative z-10">
+          <div
+            class="w-16 h-16 bg-primary/5 rounded-2xl flex items-center justify-center text-primary mb-8 group-hover:bg-primary group-hover:text-white transition-all duration-500"
+          >
+            <ShieldCheck class="w-8 h-8" />
+          </div>
+
+          <h3
+            class="text-2xl lg:text-3xl font-['Playfair_Display'] font-bold text-gray-900 mb-6 group-hover:text-primary transition-colors"
+          >
+            Liquidación de deudas
+          </h3>
+
+          <p class="text-gray-600 leading-relaxed mb-8 grow">
+            Contamos con cientos de clientes satisfechos que han logrado obtener
+            financiamiento para la compra de su hogar, vehículos y la
+            liquidación definitiva de deudas no hipotecarias.
+          </p>
+
+          <ul class="space-y-4 mb-10">
+            {
+              [
+                "Protección de activos",
+                "Eliminación de deudas",
+                "Asesoría personalizada",
+              ].map((item) => (
+                <li class="flex items-center gap-3 text-sm text-gray-500 font-medium">
+                  <CheckCircle2 class="w-4 h-4 text-primary/40" />
+                  {item}
+                </li>
+              ))
+            }
+          </ul>
+
+          <a
+            href="#contacto"
+            class="inline-flex items-center gap-2 text-gray-900 font-bold uppercase tracking-widest text-[10px] group/link"
+          >
+            Consultar más <ArrowRight
+              class="w-3.5 h-3.5 text-primary group-hover/link:translate-x-1 transition-transform"
+            />
+          </a>
+        </div>
+      </div>
+
+      <!-- Service 2: Reorganización -->
+      <div
+        class="group relative bg-white p-10 lg:p-14 shadow-[0_20px_50px_rgba(0,0,0,0.04)] hover:shadow-[0_20px_60px_rgba(204,0,0,0.08)] transition-all duration-500 border border-transparent hover:border-primary/10 flex flex-col items-start overflow-hidden"
+      >
+        <!-- Decorative background icon -->
+        <Scale
+          class="absolute -right-8 -top-8 w-48 h-48 text-gray-50/50 -rotate-12 group-hover:text-primary/5 transition-colors duration-500"
+        />
+
+        <div class="relative z-10">
+          <div
+            class="w-16 h-16 bg-primary/5 rounded-2xl flex items-center justify-center text-primary mb-8 group-hover:bg-primary group-hover:text-white transition-all duration-500"
+          >
+            <Scale class="w-8 h-8" />
+          </div>
+
+          <h3
+            class="text-2xl lg:text-3xl font-['Playfair_Display'] font-bold text-gray-900 mb-6 group-hover:text-primary transition-colors"
+          >
+            Reorganización de deudas
+          </h3>
+
+          <p class="text-gray-600 leading-relaxed mb-8 grow">
+            Nuestros expertos le ayudan a reestructurar sus compromisos
+            financieros para que pueda cumplir con sus pagos sin sacrificar sus
+            bienes esenciales como su casa o auto.
+          </p>
+
+          <ul class="space-y-4 mb-10">
+            {
+              [
+                "Plan de pagos asequible",
+                "Protección contra cobros",
+                "Estabilidad financiera",
+              ].map((item) => (
+                <li class="flex items-center gap-3 text-sm text-gray-500 font-medium">
+                  <CheckCircle2 class="w-4 h-4 text-primary/40" />
+                  {item}
+                </li>
+              ))
+            }
+          </ul>
+
+          <a
+            href="#contacto"
+            class="inline-flex items-center gap-2 text-gray-900 font-bold uppercase tracking-widest text-[10px] group/link"
+          >
+            Consultar más <ArrowRight
+              class="w-3.5 h-3.5 text-primary group-hover/link:translate-x-1 transition-transform"
+            />
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
