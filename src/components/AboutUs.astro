@@ -1,0 +1,167 @@
+---
+import { Gavel, CheckCircle2, Phone } from "@lucide/astro";
+---
+
+<section id="about-us" class="py-4 px-4 md:px-8 bg-white overflow-hidden">
+  <div class="max-w-7xl mx-auto">
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-16 lg:gap-24 items-center">
+      <!-- Left Side: Image Collage (Hidden on mobile) -->
+      <div class="relative hidden lg:block lg:col-span-5 h-[620px]">
+        <!-- Background Decorative Element -->
+        <div
+          class="absolute -top-12 -left-12 w-48 h-48 border border-primary/10 rounded-full"
+        >
+        </div>
+
+        <!-- Primary Lawyer Image -->
+        <div
+          class="absolute top-0 right-0 w-[90%] h-[520px] z-20 shadow-[0_30px_60px_-15px_rgba(0,0,0,0.15)] rounded-none overflow-hidden border-16 border-white"
+        >
+          <img
+            src="https://images.unsplash.com/photo-1505664194779-8beaceb93744?q=80&w=2070&auto=format&fit=crop"
+            alt="Abogado Lcdo. Ángel M. Egozcue"
+            class="w-full h-full object-cover grayscale-[0.2] hover:grayscale-0 transition-all duration-700"
+          />
+          <!-- Signature Style Label -->
+          <div
+            class="absolute bottom-10 left-10 text-white/90 font-['Playfair_Display'] text-2xl italic select-none drop-shadow-md"
+          >
+            Egozcue & Henriquez
+          </div>
+        </div>
+
+        <!-- Justice Statue Image (Overlap) -->
+        <div
+          class="absolute bottom-0 left-0 w-[65%] h-[350px] z-30 shadow-[0_30px_60px_-12px_rgba(0,0,0,0.25)] rounded-none overflow-hidden border-10 border-white grayscale-[0.8] hover:grayscale-0 transition-all duration-700"
+        >
+          <img
+            src="https://images.unsplash.com/photo-1589829545856-d10d557cf95f?q=80&w=2070&auto=format&fit=crop"
+            alt="Estatua de la Justicia"
+            class="w-full h-full object-cover"
+          />
+        </div>
+
+        <!-- Call Bar Overlay (Fixed position to prevent overflow) -->
+        <div
+          class="absolute top-1/4 -left-4 z-40 bg-primary px-8 py-5 flex items-center gap-5 text-white shadow-2xl animate-fade-in-left"
+        >
+          <div class="bg-white/20 p-3 rounded-full">
+            <Phone class="w-6 h-6 shrink-0" />
+          </div>
+          <div>
+            <p
+              class="text-[10px] uppercase tracking-[0.3em] font-bold opacity-80 mb-1"
+            >
+              Llámenos Hoy
+            </p>
+            <p class="font-bold text-xl tracking-tight leading-none italic">
+              (787) 774-8434
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right Side: Content -->
+      <div class="lg:col-span-7 relative">
+        <!-- Main Content Box -->
+        <div class="bg-white p-10 md:p-16 relative">
+          <!-- Subtle background text or element -->
+          <div
+            class="absolute top-0 right-0 w-32 h-32 bg-primary/5 rounded-bl-full -z-10 mt-[-20px] mr-[-20px]"
+          >
+          </div>
+
+          <!-- Section Label -->
+          <div
+            class="flex items-center gap-3 text-primary font-bold uppercase tracking-[0.25em] text-[11px] mb-8"
+          >
+            <Gavel class="w-5 h-5" />
+            <span class="border-b border-primary/30 pb-1"
+              >Trayectoria Legal</span
+            >
+          </div>
+
+          <h2
+            class="text-5xl md:text-6xl font-['Playfair_Display'] text-gray-900 leading-[1.15] mb-8"
+          >
+            Abogados Defensores <br />
+            <span class="text-primary italic font-serif"
+              >Expertos en Quiebras</span
+            >
+          </h2>
+
+          <div class="space-y-6 mb-12">
+            <h3
+              class="text-2xl font-bold text-gray-800 flex items-center gap-3"
+            >
+              Nuestro Compromiso
+              <div class="h-px bg-gray-200 grow"></div>
+            </h3>
+
+            <p class="text-gray-600 text-lg leading-relaxed">
+              Contamos con los abogados <strong class="text-gray-900"
+                >Lcdo. Ángel M. Egozcue, CPA</strong
+              > y
+              <strong class="text-gray-900">Lcda. Ada N. Henriquez</strong>,
+              quienes aportan su vasta experiencia y conocimientos en asesoría
+              legal y financiera para proteger su patrimonio y estabilidad
+              familiar.
+            </p>
+          </div>
+
+          <!-- Feature List -->
+          <div class="grid grid-cols-1 md:grid-cols-1 gap-y-5 mb-12">
+            {
+              [
+                "Excelente 'track record' en el tribunal de quiebras.",
+                "Analizamos su situación y si la quiebra NO es para usted no se la recomendamos.",
+                "Oficinas en San Juan, Bayamón, Arecibo, Caguas.",
+                "Consulta inicial sin costo ni compromiso",
+              ].map((item) => (
+                <div class="flex items-start gap-4 group">
+                  <div class="mt-1 flex items-center justify-center w-6 h-6 rounded-full border border-primary/20 text-primary group-hover:bg-primary group-hover:text-white transition-all">
+                    <CheckCircle2 class="w-3.5 h-3.5" />
+                  </div>
+                  <span class="text-gray-700 text-[15px] font-medium leading-tight">
+                    {item}
+                  </span>
+                </div>
+              ))
+            }
+          </div>
+
+          <div class="flex flex-col sm:flex-row items-center gap-8">
+            <a
+              href="#contacto"
+              class="w-full sm:w-auto text-center bg-primary hover:bg-primary-dark text-white px-12 py-5 font-bold tracking-widest uppercase text-xs transition-all duration-300 shadow-[0_10px_30px_rgba(204,0,0,0.2)] hover:shadow-primary/40 hover:-translate-y-1"
+            >
+              Solicitar Consulta
+            </a>
+            <div class="flex items-center gap-4 text-gray-400">
+              <span class="text-xs uppercase tracking-widest font-bold"
+                >20+ Años de Experiencia</span
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  @keyframes fadeInLeft {
+    from {
+      opacity: 0;
+      transform: translateX(-40px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+
+  .animate-fade-in-left {
+    animation: fadeInLeft 1s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+  }
+</style>

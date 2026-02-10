@@ -1,0 +1,241 @@
+---
+import {
+  Facebook,
+  Twitter,
+  Instagram,
+  Linkedin,
+  Mail,
+  MapPin,
+  Phone,
+  ArrowRight,
+} from "@lucide/astro";
+
+const currentYear = new Date().getFullYear();
+---
+
+<footer class="bg-[#0f0f0f] text-white pt-24 pb-12 border-t border-white/5">
+  <div class="max-w-[1400px] mx-auto px-8">
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-16 mb-20">
+      <!-- Brand Section -->
+      <div class="flex flex-col gap-8">
+        <div class="flex items-center gap-3">
+          <img
+            src="/src/assets/images/logo.png"
+            alt="Quiebras Ahora Logo"
+            class="h-12 w-auto brightness-0 invert"
+          />
+        </div>
+        <p class="text-white/60 leading-relaxed text-[0.95rem]">
+          Expertos en defensa legal y soluciones financieras. Recupera tu
+          tranquilidad y toma el control de tu futuro económico con nuestro
+          equipo de especialistas.
+        </p>
+        <div class="flex gap-4">
+          <a
+            href="#"
+            class="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center hover:bg-primary transition-all group"
+          >
+            <Facebook
+              class="w-5 h-5 text-white group-hover:scale-110 transition-transform"
+            />
+          </a>
+          <a
+            href="#"
+            class="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center hover:bg-primary transition-all group"
+          >
+            <Twitter
+              class="w-5 h-5 text-white group-hover:scale-110 transition-transform"
+            />
+          </a>
+          <a
+            href="#"
+            class="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center hover:bg-primary transition-all group"
+          >
+            <Instagram
+              class="w-5 h-5 text-white group-hover:scale-110 transition-transform"
+            />
+          </a>
+          <a
+            href="#"
+            class="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center hover:bg-primary transition-all group"
+          >
+            <Linkedin
+              class="w-5 h-5 text-white group-hover:scale-110 transition-transform"
+            />
+          </a>
+        </div>
+      </div>
+
+      <!-- Quick Links -->
+      <div>
+        <h4 class="text-xl font-bold mb-8 relative inline-block">
+          Nuestros Servicios
+          <span class="absolute -bottom-2 left-0 w-12 h-1 bg-primary"></span>
+        </h4>
+        <ul class="flex flex-col gap-4">
+          <li>
+            <a
+              href="#"
+              class="text-white/60 hover:text-primary flex items-center gap-2 transition-colors group"
+            >
+              <ArrowRight
+                class="w-4 h-4 opacity-0 group-hover:opacity-100 -ml-6 group-hover:ml-0 transition-all"
+              />
+              Defensa de Acreedores
+            </a>
+          </li>
+          <li>
+            <a
+              href="#"
+              class="text-white/60 hover:text-primary flex items-center gap-2 transition-colors group"
+            >
+              <ArrowRight
+                class="w-4 h-4 opacity-0 group-hover:opacity-100 -ml-6 group-hover:ml-0 transition-all"
+              />
+              Ley de Insolvencia
+            </a>
+          </li>
+          <li>
+            <a
+              href="#"
+              class="text-white/60 hover:text-primary flex items-center gap-2 transition-colors group"
+            >
+              <ArrowRight
+                class="w-4 h-4 opacity-0 group-hover:opacity-100 -ml-6 group-hover:ml-0 transition-all"
+              />
+              Asesoría Hipotecaria
+            </a>
+          </li>
+          <li>
+            <a
+              href="#"
+              class="text-white/60 hover:text-primary flex items-center gap-2 transition-colors group"
+            >
+              <ArrowRight
+                class="w-4 h-4 opacity-0 group-hover:opacity-100 -ml-6 group-hover:ml-0 transition-all"
+              />
+              Remate de Propiedades
+            </a>
+          </li>
+          <li>
+            <a
+              href="#"
+              class="text-white/60 hover:text-primary flex items-center gap-2 transition-colors group"
+            >
+              <ArrowRight
+                class="w-4 h-4 opacity-0 group-hover:opacity-100 -ml-6 group-hover:ml-0 transition-all"
+              />
+              Derecho Bancario
+            </a>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Contact Info -->
+      <div>
+        <h4 class="text-xl font-bold mb-8 relative inline-block">
+          Contacto
+          <span class="absolute -bottom-2 left-0 w-12 h-1 bg-primary"></span>
+        </h4>
+        <ul class="flex flex-col gap-6">
+          <li class="flex items-start gap-4 text-white/60">
+            <div
+              class="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center shrink-0"
+            >
+              <MapPin class="w-5 h-5 text-primary" />
+            </div>
+            <span
+              >Calle Principal 123, <br />Edificio Legal, Piso 5<br />Ciudad de
+              México</span
+            >
+          </li>
+          <li
+            class="flex items-center gap-4 text-white/60 hover:text-white transition-colors cursor-pointer"
+          >
+            <div
+              class="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center shrink-0"
+            >
+              <Phone class="w-5 h-5 text-primary" />
+            </div>
+            <span>+52 (55) 1234 5678</span>
+          </li>
+          <li
+            class="flex items-center gap-4 text-white/60 hover:text-white transition-colors cursor-pointer"
+          >
+            <div
+              class="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center shrink-0"
+            >
+              <Mail class="w-5 h-5 text-primary" />
+            </div>
+            <span>info@quiebrasahora.com</span>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Newsletter -->
+      <div>
+        <h4 class="text-xl font-bold mb-8 relative inline-block">
+          Consulta Gratuita
+          <span class="absolute -bottom-2 left-0 w-12 h-1 bg-primary"></span>
+        </h4>
+        <p class="text-white/60 mb-6 text-[0.95rem]">
+          Déjanos tu correo y nos pondremos en contacto para una asesoría
+          inicial sin costo.
+        </p>
+        <form class="relative">
+          <input
+            type="email"
+            placeholder="Tu correo electrónico"
+            class="w-full bg-white/5 border border-white/10 rounded-sm py-4 px-5 focus:outline-none focus:border-primary/50 text-white placeholder:text-white/30"
+          />
+          <button
+            class="absolute right-2 top-2 bottom-2 bg-primary hover:bg-primary-dark px-4 rounded-sm transition-colors group"
+          >
+            <ArrowRight
+              class="w-5 h-5 group-hover:translate-x-1 transition-transform"
+            />
+          </button>
+        </form>
+      </div>
+    </div>
+
+    <!-- Bottom Bar -->
+    <div
+      class="pt-12 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-8 text-[0.9rem] text-white/40"
+    >
+      <p>© {currentYear} Quiebras Ahora. Todos los derechos reservados.</p>
+      <div class="flex gap-8">
+        <a href="#" class="hover:text-primary transition-colors"
+          >Términos y condiciones</a
+        >
+        <a href="#" class="hover:text-primary transition-colors"
+          >Aviso de Privacidad</a
+        >
+        <a href="#" class="hover:text-primary transition-colors">Cookies</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<style>
+  footer {
+    position: relative;
+    overflow: hidden;
+  }
+
+  /* Sutil gradiente para profundidad */
+  footer::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(
+      circle at 10% 10%,
+      rgba(204, 0, 0, 0.03) 0%,
+      transparent 40%
+    );
+    pointer-events: none;
+  }
+</style>
