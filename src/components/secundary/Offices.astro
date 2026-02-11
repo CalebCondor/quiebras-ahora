@@ -5,6 +5,7 @@ const offices = [
   {
     city: "Área Metro",
     address: "Avenida San Patricio 785, San Juan, PR",
+    query: "Avenida San Patricio 785, San Juan, PR",
     phones: [
       "1-800-981-7133",
       "(787) 781-5635",
@@ -15,11 +16,13 @@ const offices = [
   {
     city: "Bayamón",
     address: "Urb. Riverview, Calle 25 DD16, Bayamón, PR",
+    query: "Calle 25, Bayamón, Puerto Rico",
     phones: ["(787) 787-4747", "(787) 787-4775", "1-800-664-0088"],
   },
   {
     city: "Caguas",
     address: "Urb. Santa Juana, calle 19 # R8, Caguas, PR",
+    query: "Urb. Santa Juana, calle 19 # R8, Caguas, PR",
     phones: ["(787) 746-5266", "(787) 746-5288", "1-800-501-0088"],
   },
 ];
@@ -67,7 +70,7 @@ const offices = [
               </h3>
 
               {/* Address Section - Fixed height to ensure alignment */}
-              <div class="flex items-start gap-4 mb-8 min-h-[3rem]">
+              <div class="flex items-start gap-4 mb-2 min-h-12">
                 <MapPin class="w-5 h-5 text-primary shrink-0 mt-1" />
                 <p class="text-gray-600 leading-relaxed font-medium text-sm">
                   {office.address}
@@ -88,7 +91,7 @@ const offices = [
                       <div class="p-2 rounded-full bg-gray-50 group-hover/phone:bg-primary/10 transition-colors">
                         <Phone class="w-3.5 h-3.5 text-primary" />
                       </div>
-                      <span class="font-bold text-sm tracking-tight whitespace-nowrap">
+                      <span class="font-bold text- whitespace-nowrap font-['Montserrat']">
                         {phone}
                       </span>
                     </a>
@@ -111,7 +114,7 @@ const offices = [
                   style="border:0"
                   loading="lazy"
                   src={`https://maps.google.com/maps?q=${encodeURIComponent(
-                    office.address,
+                    office.query,
                   )}&t=&z=15&ie=UTF8&iwloc=&output=embed`}
                   class="grayscale group-hover:grayscale-0 opacity-80 group-hover:opacity-100 transition-all duration-700"
                 />

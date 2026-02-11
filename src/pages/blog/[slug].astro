@@ -1,0 +1,195 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import { blogPosts } from "../../data/blog";
+import { Calendar, User, ArrowLeft, Share2 } from "@lucide/astro";
+
+export function getStaticPaths() {
+  return blogPosts.map((post) => ({
+    params: { slug: post.slug },
+    props: { post },
+  }));
+}
+
+const { post } = Astro.props;
+---
+
+<Layout>
+  <div class="pt-32 pb-24 bg-white">
+    <article class="max-w-[1000px] mx-auto px-8">
+      <!-- Breadcrumb / Back Link -->
+      <a
+        href="/blog"
+        class="inline-flex items-center gap-2 text-primary font-bold uppercase tracking-widest text-xs mb-12 hover:-translate-x-2 transition-transform"
+      >
+        <ArrowLeft class="w-4 h-4" />
+        Volver al Blog
+      </a>
+
+      <!-- Header Section -->
+      <header class="mb-16">
+        <div
+          class="inline-block px-4 py-1.5 mb-8 text-[11px] font-bold tracking-[0.25em] text-primary uppercase bg-primary/5 rounded-full"
+        >
+          {post.category}
+        </div>
+
+        <h1
+          class="text-4xl md:text-6xl lg:text-7xl font-['Playfair_Display'] font-bold text-gray-900 leading-[1.1] mb-10"
+        >
+          {post.title}
+        </h1>
+
+        <div
+          class="flex flex-wrap items-center gap-8 py-8 border-y border-gray-100 font-['Montserrat']"
+        >
+          <div class="flex items-center gap-3">
+            <div
+              class="w-12 h-12 bg-gray-100 rounded-full flex items-center justify-center"
+            >
+              <User class="w-6 h-6 text-gray-400" />
+            </div>
+            <div>
+              <p
+                class="text-[10px] uppercase tracking-widest text-gray-400 font-bold"
+              >
+                Autor
+              </p>
+              <p class="text-gray-900 font-bold text-sm">{post.author}</p>
+            </div>
+          </div>
+
+          <div class="flex items-center gap-3">
+            <div
+              class="w-12 h-12 bg-gray-100 rounded-full flex items-center justify-center"
+            >
+              <Calendar class="w-6 h-6 text-gray-400" />
+            </div>
+            <div>
+              <p
+                class="text-[10px] uppercase tracking-widest text-gray-400 font-bold"
+              >
+                Fecha
+              </p>
+              <p class="text-gray-900 font-bold text-sm">{post.date}</p>
+            </div>
+          </div>
+
+          <button
+            class="ml-auto flex items-center gap-2 text-gray-400 hover:text-primary transition-colors text-xs font-bold uppercase tracking-widest"
+          >
+            <Share2 class="w-4 h-4" />
+            Compartir
+          </button>
+        </div>
+      </header>
+
+      <!-- Featured Image -->
+      <div
+        class="relative h-[400px] md:h-[600px] mb-20 overflow-hidden shadow-2xl"
+      >
+        <img
+          src={post.image}
+          alt={post.title}
+          class="w-full h-full object-cover"
+        />
+      </div>
+
+      <!-- Content Section -->
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-16">
+        <div class="lg:col-span-8">
+          <div
+            class="prose prose-lg max-w-none prose-headings:font-['Playfair_Display'] prose-headings:text-gray-900 prose-p:text-gray-600 prose-p:leading-relaxed prose-li:text-gray-600 prose-strong:text-gray-900 prose-img:rounded-none"
+            set:html={post.content}
+          />
+
+          <!-- Simple Contact CTA at the end of post -->
+          <div class="mt-20 p-12 bg-gray-50 border-l-4 border-primary">
+            <h4
+              class="text-2xl font-['Playfair_Display'] font-bold text-gray-900 mb-4"
+            >
+              ¿Necesita asesoría personalizada?
+            </h4>
+            <p class="text-gray-600 mb-8 leading-relaxed">
+              Cada situación financiera es única. Permítanos analizar su caso
+              sin compromiso.
+            </p>
+            <a
+              href="/#contacto"
+              class="inline-block bg-primary hover:bg-primary-dark text-white px-10 py-4 rounded-sm font-bold text-xs uppercase tracking-widest transition-all"
+            >
+              Contactar Ahora
+            </a>
+          </div>
+        </div>
+
+        <!-- Sidebar / Related Info -->
+        <aside class="lg:col-span-4 space-y-12">
+          <div class="bg-white border border-gray-100 p-8">
+            <h4
+              class="text-lg font-bold text-gray-900 mb-6 flex items-center gap-2"
+            >
+              <span class="w-1.5 h-6 bg-primary"></span>
+              Categorías
+            </h4>
+            <ul class="space-y-4">
+              {
+                [
+                  "Consejos Legales",
+                  "Educación",
+                  "Capítulo 13",
+                  "Capítulo 7",
+                ].map((cat) => (
+                  <li>
+                    <a
+                      href="#"
+                      class="text-sm text-gray-600 hover:text-primary transition-colors flex justify-between items-center group"
+                    >
+                      {cat}
+                      <span class="text-[10px] bg-gray-50 px-2 py-1 rounded text-gray-400 group-hover:bg-primary/5 transition-colors">
+                        12
+                      </span>
+                    </a>
+                  </li>
+                ))
+              }
+            </ul>
+          </div>
+
+          <div class="bg-primary p-8 text-white relative overflow-hidden group">
+            <div class="relative z-10">
+              <h4
+                class="text-2xl font-['Playfair_Display'] font-bold mb-4 italic"
+              >
+                ¿Cómo podemos ayudarle?
+              </h4>
+              <p class="text-white/80 text-sm mb-8 leading-relaxed">
+                Nuestros abogados expertos están listos para defender su
+                patrimonio.
+              </p>
+              <a
+                href="tel:787-774-8434"
+                class="inline-flex items-center gap-3 font-bold text-sm tracking-widest uppercase hover:translate-x-2 transition-transform"
+              >
+                Llamar Ahora
+                <ArrowLeft class="w-4 h-4 rotate-180" />
+              </a>
+            </div>
+            <div
+              class="absolute -right-10 -bottom-10 w-40 h-40 bg-white/10 rounded-full group-hover:scale-150 transition-transform duration-700"
+            >
+            </div>
+          </div>
+        </aside>
+      </div>
+    </article>
+  </div>
+</Layout>
+
+<style is:global>
+  /* Fix image aspect ratios in content if needed */
+  .prose img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+  }
+</style>

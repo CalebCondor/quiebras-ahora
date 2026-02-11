@@ -1,0 +1,30 @@
+---
+import Layout from "../layouts/Layout.astro";
+import BlogSection from "../components/secundary/Blog.astro";
+---
+
+<Layout>
+  <div class="pt-32 pb-0 bg-gray-50/30">
+    <div class="max-w-[1400px] mx-auto px-4 sm:px-8">
+      <div class="mb-0">
+        <div
+          class="inline-block px-4 py-1.5 mb-6 text-[11px] font-bold tracking-[0.25em] text-primary uppercase bg-primary/5 rounded-full"
+        >
+          Contenido Legal Exclusivo
+        </div>
+        <h1
+          class="text-5xl md:text-7xl lg:text-8xl font-['Playfair_Display'] font-bold text-gray-900 mb-8"
+        >
+          Nuestro <span class="text-primary italic font-serif">Blog</span>
+        </h1>
+        <p class="text-xl md:text-2xl text-gray-600 max-w-3xl leading-relaxed">
+          Artículos, guías y noticias actualizadas sobre el proceso de quiebra y
+          estabilidad financiera en Puerto Rico.
+        </p>
+      </div>
+    </div>
+
+    <!-- We hide the header inside BlogSection because we already have one here -->
+    <BlogSection showHeader={false} />
+  </div>
+</Layout>

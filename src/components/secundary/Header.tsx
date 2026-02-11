@@ -26,7 +26,7 @@ const navItems = [
   { label: "Bufete", href: "#nosotros", icon: Scale },
   { label: "Servicios", href: "#servicios", icon: Gavel },
   { label: "Oficinas", href: "#oficinas", icon: MapPin },
-  { label: "Blog", href: "#blog", icon: BookOpen },
+  { label: "Blog", href: "/blog", icon: BookOpen },
   { label: "Contacto", href: "#contacto", icon: Phone },
 ];
 
@@ -57,7 +57,7 @@ export function Header() {
             className="transition-transform hover:scale-105 duration-300"
           >
             <img
-              src="images/logo.png"
+              src="/images/logo.png"
               alt="Logo"
               className="h-8 md:h-8 w-auto object-contain"
             />
