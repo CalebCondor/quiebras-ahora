@@ -5,6 +5,7 @@ import AboutUs from "../components/AboutUs.astro";
 import WhoShout from "../components/secundary/who-shout.astro";
 import Services from "../components/secundary/Services.astro";
 import { TestimonialsSection } from "@/components/secundary/testimonials-section";
+import BlogPreview from "../components/secundary/BlogPreview.astro";
 import OfficesSection from "../components/secundary/Offices.astro";
 ---
 
@@ -14,6 +15,6 @@ import OfficesSection from "../components/secundary/Offices.astro";
   <WhoShout />
   <Services />
   <TestimonialsSection client:visible />
+  <BlogPreview />
   <OfficesSection />
-  <!-- Aquí irán las demás secciones como Oficinas, Blog, etc. -->
 </Layout>
