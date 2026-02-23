@@ -27,7 +27,6 @@ const navItems = [
   { label: "Servicios", href: "#servicios", icon: Gavel },
   { label: "Oficinas", href: "#oficinas", icon: MapPin },
   { label: "Blog", href: "/blog", icon: BookOpen },
-  { label: "Contacto", href: "#contacto", icon: Phone },
 ];
 
 export function Header() {
