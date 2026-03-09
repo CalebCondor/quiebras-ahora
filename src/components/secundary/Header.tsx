@@ -22,11 +22,8 @@ import {
 } from "@/components/ui/sheet";
 
 const navItems = [
-  { label: "Inicio", href: "/", icon: Home },
-  { label: "Bufete", href: "#nosotros", icon: Scale },
-  { label: "Servicios", href: "#servicios", icon: Gavel },
-  { label: "Oficinas", href: "#oficinas", icon: MapPin },
-  { label: "Blog", href: "/blog", icon: BookOpen },
+
+  { label: "Blog", href: "https://quiebrasahora.com/blog/", icon: BookOpen },
 ];
 
 export function Header() {
@@ -63,7 +60,7 @@ export function Header() {
           </a>
         </div>
 
-        {/* Desktop Navigation */}
+        {/* Desktop Navigation 
         <nav className="hidden lg:block">
           <ul className="flex gap-10">
             {navItems.map((item) => (
@@ -82,14 +79,14 @@ export function Header() {
             ))}
           </ul>
         </nav>
-
+*/}
         <div className="flex items-center gap-6">
           <div className="hidden lg:block">
             <a
-              href="#"
+              href="https://quiebrasahora.com/blog/"
               className="bg-primary hover:bg-primary-dark text-white px-8 py-3.5 rounded-sm font-bold text-xs uppercase tracking-widest transition-all hover:-translate-y-1 hover:shadow-xl active:translate-y-0"
             >
-              Get a Quote
+              Blog
             </a>
           </div>
 
