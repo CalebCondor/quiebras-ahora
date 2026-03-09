@@ -7,9 +7,14 @@ import Services from "../components/secundary/Services.astro";
 import { TestimonialsSection } from "@/components/secundary/testimonials-section";
 import BlogPreview from "../components/secundary/BlogPreview.astro";
 import OfficesSection from "../components/secundary/Offices.astro";
-import OfficesIndex from "../components/secundary/OfficesIndex.astro";
 ---
 
 <Layout>
-  <OfficesIndex />
+  <Hero />
+  <AboutUs />
+  <WhoShout />
+  <Services />
+  <TestimonialsSection client:visible />
+  <BlogPreview />
+  <OfficesSection />
 </Layout>
